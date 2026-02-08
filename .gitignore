@@ -4,3 +4,5 @@ node_modules/
 # Build output (TypeScript)
 dist/
 
+# Environment variable files
+**/*.env
