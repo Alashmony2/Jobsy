@@ -1,6 +1,8 @@
 import { type Express } from "express";
 import authRouter from "./module/auth/auth.controller";
 export function bootstrap(app: Express, express: any) {
+  //parsing body => row json
+  app.use(express.json());
   //auth 
   app.use("/auth", authRouter);
   app.use("/{*dummy}", (req, res, next) => {
